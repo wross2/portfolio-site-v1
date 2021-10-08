@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 
-class Header extends Component {
+class About extends Component {
     render() {
         return <div></div>
     }
 }
 
-export default Header
+export default About

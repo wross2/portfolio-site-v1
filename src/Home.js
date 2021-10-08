@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Header from './sections/Header'
+import About from './sections/About'
 import Conclusion from './sections/Conclusion'
 import ProjectSection from './sections/ProjectSection'
 
@@ -7,7 +7,7 @@ class Home extends Component {
     render() {
         return(
             <div id="home-page">
-                <Header />
+                <About />
                 <ProjectSection />
                 <Conclusion />
             </div>
