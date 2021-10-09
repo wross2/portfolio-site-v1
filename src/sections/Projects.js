@@ -10,7 +10,7 @@ const ProjectPanel = props => {
     )
 }
 
-class ProjectSection extends Component {
+class Projects extends Component {
     render() {
         return (
             <div className="section" id="section-projects">
@@ -22,4 +22,4 @@ class ProjectSection extends Component {
     }
 }
 
-export default ProjectSection
+export default Projects
