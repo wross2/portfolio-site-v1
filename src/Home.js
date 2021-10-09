@@ -5,12 +5,13 @@ import Projects from './sections/Projects'
 
 class Home extends Component {
     render() {
+        const sectionClassName = "main-section";
         return(
-            <div id="home-page">
-                <About />
-                <Projects />
-                <Conclusion />
-            </div>
+            <main id="home-page">
+                <About className={sectionClassName} />
+                <Projects className={sectionClassName} />
+                <Conclusion className={sectionClassName} />
+            </main>
         )
     }
 }
