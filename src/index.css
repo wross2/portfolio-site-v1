@@ -1,12 +1,64 @@
+/* GLOBALS
+--------------------------------------- */
 :root{
-    --black: #000000;
-    --white: #FFFFFF;
-    --grey: #d3d3d3;
-    --purple: #8504b0;
+    --BLACK: #000000;
+    --WHITE: #FFFFFF;
+    --GRAY: #d3d3d3;
+    --PURPLE: #ad78bf;
 }
 
-body {
-    background-color: var(--black);
-    color: white;
+html, body, #root, noscript {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    z-index: -1;
+    font-size: 16px;
 }
 
+
+/* Base of page 
+--------------------------------------- */
+#home-page {
+    background-color: var(--WHITE);
+    color: var(--BLACK);
+    margin: 0;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    bottom: -1;
+    min-height: 100%;
+    width: 100%;
+}
+
+
+/* Page Sections
+--------------------------------------- */
+.all-sections {
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.all-sections a:link, a:visited{
+    color: var(--BLACK);
+    background-color: var(--WHITE);
+    text-decoration-color: var(--PURPLE);
+    text-decoration-thickness: 2.5px;
+}
+
+.all-sections a:hover, a:active{
+    color: var(--WHITE);
+    background-color: var(--PURPLE);
+    text-decoration: none;
+}
+
+::selection{
+    background-color: var(--PURPLE);
+    color: var(--WHITE);
+}
