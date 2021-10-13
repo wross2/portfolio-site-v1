@@ -1,0 +1,19 @@
+/* #about-section {} */
+
+#about-greeting {
+    font-size: 2.5rem;
+    float: none;
+    width: min-content;
+    width: max-content;
+    min-height: 70px;
+    margin: 0 auto;
+    margin-top: 35px;
+    /* margin-bottom: 10vh; */
+}
+
+#about-professional, #about-tech{
+    width: 70%;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 2vh;
+}
