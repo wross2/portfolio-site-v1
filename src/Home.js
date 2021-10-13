@@ -5,7 +5,7 @@ import Projects from './sections/Projects'
 
 class Home extends Component {
     render() {
-        const sectionClassName = "main-section";
+        const sectionClassName = "all-sections";
         return(
             <main id="home-page">
                 <About className={sectionClassName} />
