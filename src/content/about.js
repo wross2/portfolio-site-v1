@@ -1,8 +1,8 @@
 const professionalInfo = (
 "I am a software developer who holds a BSc in Electrical Engineering. " +
 "I have worked on a range of projects including academic research on machine learning algorithms, " +
-"government enterprise software, and robotics hardware and software. My soft skills include: " +
-"effective communicator, self-motivated learner, and a relentless drive to see things " +
+"government enterprise software, and robotics hardware and software. My strengths include: " +
+"effective communication, self-motivated learning, and a relentless drive to see things " +
 "through to completion."
 )
 
