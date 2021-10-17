@@ -2,7 +2,7 @@ const projectData = [
     {
         id: "algoviz-project",
         name: "AlgoViz",
-        codeRepo: "https://github.com/williamross165/AlgoViz",
+        codeRepo: "https://github.com/wross2/AlgoViz",
         site: "https://algov1z.netlify.app",
         tech: [
             "HTML", "CSS", "Javascript"
