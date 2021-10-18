@@ -2,23 +2,35 @@
     --greeting-font-size: 2.5rem;
 }
 
+.cover-sheet{
+    position: fixed;
+    background-color: var(--WHITE);
+    min-height: 100%;
+    min-width: 100%;
+    z-index: 1000;
+}
+
+
 .cover-page{
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    background-color: white;
     height: 100vh;
-    z-index: 1000;
+    z-index: 1001;
     font-size: var(--greeting-font-size);
     float: none;
     width: 100%;
-    
 }
 
-.cover-greeting{
-    width: max-content;
+.greeting-wrapper{
+    max-width: 93vw;
+    margin-left: 6vw;
 }
+
+/* .greeting-text{
+    
+} */
 
 .greeting-cursor{
     font-size: calc(var(--greeting-font-size) + 7px);
