@@ -3,6 +3,16 @@ import Typewriter from 'typewriter-effect';
 import "./styles/cover-page.css";
 
 
+const typingExecution = (typewriter) => {typewriter
+    .start().pauseFor(2000).changeDelay(200)
+    .typeString("Hello.").pauseFor(1000).changeDelay(150)
+    .typeString(" My name is William Ross.").pauseFor(1000)
+    .typeString(" I am a<br>Creator.").pauseFor(1000)
+    .deleteChars(8).pauseFor(500).typeString("Builder.")
+    .pauseFor(1000).deleteChars(8).pauseFor(1000)
+    .changeDelay(200).typeString("<u>Software Engineer</u>.")
+}
+
 class CoverPage extends Component{
     constructor(props){
         super(props);
@@ -24,12 +34,9 @@ class CoverPage extends Component{
         if (opacity < 0) opacity = 0;
         
         this.setState({opacity: opacity});
-        console.log(window.scrollY);
-        console.log(window.innerHeight);
     }
 
     render(){
-    const greeting = `Hello, my name is William Ross`;
     return (<>
     <div className="cover-sheet" style={{opacity: this.state.opacity}}></div>
     <div className="cover-page" onScroll={this._onScroll} style={{opacity: this.state.opacity}}>
@@ -37,16 +44,10 @@ class CoverPage extends Component{
             <Typewriter
                 options={{
                     wrapperClassName: "Typewriter__wrapper greeting-text",
-                    cursorClassName: "Typewriter__cursor greeting-cursor"
+                    cursorClassName: "Typewriter__cursor greeting-cursor",
+                    deleteSpeed: 30
                 }}
-                onInit={(typewriter) => {typewriter
-                    .start()
-                    .pauseFor(2500)
-                    .stop()
-                    .changeDelay(100)
-                    .typeString(greeting)
-                    .start();
-                }}
+                onInit={typingExecution}
             />
         </div>
     </div></>)

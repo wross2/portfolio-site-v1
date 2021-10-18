@@ -24,8 +24,14 @@
 }
 
 .greeting-wrapper{
-    max-width: 93vw;
-    margin-left: 6vw;
+    max-width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.cover-page u {
+    text-decoration: none;
+    border-bottom: 5px solid var(--PURPLE);
 }
 
 /* .greeting-text{
