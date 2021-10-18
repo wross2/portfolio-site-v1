@@ -3,18 +3,19 @@ import About from './sections/About'
 import Conclusion from './sections/Conclusion'
 import CoverPage from './sections/CoverPage';
 import Projects from './sections/Projects'
+import './home.css';
 
 class Home extends Component {
     render() {
         const sectionClassName = "all-sections";
-        return(
+        return(<>
+            <CoverPage />
             <main id="home-page">
-                <CoverPage />
                 <About className={sectionClassName} />
                 <Projects className={sectionClassName} />
                 <Conclusion className={sectionClassName} />
             </main>
-        )
+        </>)
     }
 }
 
