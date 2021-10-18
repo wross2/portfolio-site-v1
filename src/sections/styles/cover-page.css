@@ -10,11 +10,9 @@
     z-index: 1000;
 }
 
-
 .cover-page{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     position: absolute;
     height: 100vh;
     z-index: 1001;
@@ -24,6 +22,10 @@
 }
 
 .greeting-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vw;
     max-width: 90vw;
     margin-left: 5vw;
     margin-right: 5vw;
@@ -41,4 +43,20 @@
 .greeting-cursor{
     font-size: calc(var(--greeting-font-size) + 7px);
     color: var(--PURPLE);
+}
+
+.scroll-instruction{
+    text-align: center;
+    font-size: 1.75rem;
+    color: var(--PURPLE);
+
+    opacity: 0;
+    animation: fadeIn 3s;
+    animation-delay: 25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

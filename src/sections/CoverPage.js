@@ -50,6 +50,10 @@ class CoverPage extends Component{
                 onInit={typingExecution}
             />
         </div>
+        <div className="scroll-instruction">
+            <div>scroll to continue</div>
+            <div className="scroll-arrow">↓</div>
+        </div>
     </div></>)
     }
 }
