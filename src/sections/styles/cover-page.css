@@ -37,9 +37,9 @@
     border-bottom: 5px solid var(--PURPLE);
 }
 
-/* .greeting-text{
-    
-} */
+.greeting-text{
+    max-width: 645px;
+}
 
 .greeting-cursor{
     font-size: calc(var(--greeting-font-size) + 7px);
@@ -48,7 +48,7 @@
 
 .scroll-instruction{
     text-align: center;
-    font-size: 1.75rem;
+    font-size: 2.3rem;
     color: var(--PURPLE);
 
     opacity: 0;
