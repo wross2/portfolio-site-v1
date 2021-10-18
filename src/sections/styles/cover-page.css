@@ -1,0 +1,26 @@
+:root{
+    --greeting-font-size: 2.5rem;
+}
+
+.cover-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: white;
+    height: 100vh;
+    z-index: 1000;
+    font-size: var(--greeting-font-size);
+    float: none;
+    width: 100%;
+    
+}
+
+.cover-greeting{
+    width: max-content;
+}
+
+.greeting-cursor{
+    font-size: calc(var(--greeting-font-size) + 7px);
+    color: var(--PURPLE);
+}
