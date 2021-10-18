@@ -1,0 +1,42 @@
+/* Base of page 
+--------------------------------------- */
+#home-page {
+    background-color: var(--WHITE);
+    color: var(--BLACK);
+    margin: 0;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    bottom: -1;
+    min-height: 100%;
+    width: 100%;
+    margin-top: 70vh;
+}
+
+
+/* Page Sections
+--------------------------------------- */
+.all-sections {
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.all-sections a:link, a:visited{
+    color: var(--BLACK);
+    background-color: var(--WHITE);
+    text-decoration-color: var(--PURPLE);
+    text-decoration-thickness: 2.5px;
+}
+
+.all-sections a:hover, a:active{
+    color: var(--WHITE);
+    background-color: var(--PURPLE);
+    text-decoration: none;
+}
+
+::selection{
+    background-color: var(--PURPLE);
+    color: var(--WHITE);
+}
