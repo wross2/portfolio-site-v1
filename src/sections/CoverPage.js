@@ -17,7 +17,7 @@ class CoverPage extends Component{
     constructor(props){
         super(props);
 
-        this.state = {opacity: 1, arrowOpacity: 1};
+        this.state = {opacity: 1, arrowOpacity: 1, textOpacity: 1};
     }
 
     componentDidMount(){
@@ -29,18 +29,17 @@ class CoverPage extends Component{
     }
 
     _onScroll = (e) => {
-        let opacity = 1 - ((window.scrollY - (window.innerHeight/7)) / (window.innerHeight/2));
-        let arrowOpacity = opacity/10;
+        const opacity = 1 - ((window.scrollY - (window.innerHeight/7)) / (window.innerHeight/2.5));
         if (opacity > 1) {
-            opacity = 1;
-            arrowOpacity = 1;
+            this.setState({opacity: 1, arrowOpacity: 1, textOpacity: 1});
         }
         if (opacity < 0) {
-            opacity = 0;
-            arrowOpacity = 0;
+            this.setState({opacity: 0, arrowOpacity: 0, textOpacity: 0});
         }
         
-        this.setState({opacity: opacity, arrowOpacity: arrowOpacity});
+        this.setState({opacity: opacity, 
+                       arrowOpacity: opacity/4, 
+                       textOpacity: opacity/2});
     }
 
     render(){
