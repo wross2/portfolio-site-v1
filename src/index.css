@@ -21,3 +21,18 @@ html, body, #root, noscript {
     z-index: -1;
     font-size: 20px;
 }
+
+li {
+    /* Base */
+    list-style: none;
+    position: relative;
+}
+
+li:before{
+    content: '›'; 
+    font-size: 25px;
+    font-weight: 900;
+    margin-left: -20px;
+    margin-right: 10px;
+    color: var(--PURPLE)
+}
