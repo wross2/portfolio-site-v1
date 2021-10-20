@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './styles/about.css'
 import aboutData from '../content/about'
+import myPFP from '../images/me.jpeg'
 
 
 
@@ -11,8 +12,10 @@ class About extends Component {
         return (
             <section className={className} id="about-section">
 
-                {/* Add Image Here */}
-                
+                <div className="pfp-container">
+                    <img src={myPFP} alt="William Ross" className="about-pfp"/>
+                </div>
+
                 <div id="about-professional">
                     {aboutData.professional}
                 </div>

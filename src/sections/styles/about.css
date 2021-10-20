@@ -1,9 +1,25 @@
 /* #about-section {} */
 
 
-#about-professional, #about-tech{
+/* #about-professional, #about-tech{
     width: 70%;
     margin: 0 auto;
     float: none;
     margin-bottom: 2vh;
+} */
+
+/* Main Profile Picture
+--------------------------------------- */
+.about-pfp{
+    height: 300px;
+    width: 200px;
+    transform: scale(1.85);
+    margin-top: 60px;
+}
+
+.pfp-container{
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 50%;
 }
