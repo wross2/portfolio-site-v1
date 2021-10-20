@@ -11,4 +11,4 @@ A site for my personal portfolio, built on React.
 
 # Acknowledgements
 
-- Typewriter effect from [here](https://safi.me.uk/typewriterjs/)
+- Typewriter effect from [TypewriterJS](https://safi.me.uk/typewriterjs/)
