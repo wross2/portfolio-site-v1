@@ -20,6 +20,8 @@ html, body, #root, noscript {
     border-width: 0;
     z-index: -1;
     font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 li {
