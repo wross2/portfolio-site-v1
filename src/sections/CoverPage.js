@@ -17,7 +17,12 @@ class CoverPage extends Component{
     constructor(props){
         super(props);
 
-        this.state = {opacity: 1, arrowOpacity: 1, greetingOpacity: 1};
+        this.state = {
+            opacity: 1, 
+            arrowOpacity: 1, 
+            greetingOpacity: 1,
+            zIndex: 1001
+        };
     }
 
     componentDidMount(){
@@ -34,24 +39,30 @@ class CoverPage extends Component{
         const greetingOpacity = (
             1 - ((window.scrollY) / (window.innerHeight/4))
         )
-        let opacity = 1 - ((window.scrollY - (window.innerHeight/3.35)) / (window.innerHeight/3.5));
+        let opacity = 1 - ((window.scrollY - (window.innerHeight/3.35)) 
+                            / (window.innerHeight/3.5));
 
         if (opacity >= 1) {
             opacity = 1
         }
-        if (opacity < 0) {
-            this.setState({opacity: 0, arrowOpacity: 0, greetingOpacity: 0});
+        if (opacity <= 0.05) {
+            this.setState({
+                opacity: 0, 
+                arrowOpacity: 0, 
+                greetingOpacity: 0, 
+                zIndex: -1});
             return
         }
         
         this.setState({opacity: opacity, 
                        arrowOpacity: greetingOpacity, 
-                       greetingOpacity: greetingOpacity});
+                       greetingOpacity: greetingOpacity,
+                       zIndex: 1001});
     }
 
     render(){
     return (<>
-    <div className="cover-sheet" style={{opacity: this.state.opacity}}></div>
+    <div className="cover-sheet" style={{opacity: this.state.opacity, zIndex: this.state.zIndex}}></div>
     <div className="cover-page" onScroll={this._onScroll} style={{opacity: this.state.greetingOpacity}}>
         <div className="greeting-wrapper">
             <Typewriter
