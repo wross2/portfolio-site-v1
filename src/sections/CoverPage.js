@@ -17,7 +17,7 @@ class CoverPage extends Component{
     constructor(props){
         super(props);
 
-        this.state = {opacity: 1, arrowOpacity: 1, textOpacity: 1};
+        this.state = {opacity: 1, arrowOpacity: 1, greetingOpacity: 1};
     }
 
     componentDidMount(){
@@ -28,26 +28,31 @@ class CoverPage extends Component{
         window.removeEventListener('scroll', this._onScroll);
     }
 
+    // When user is scrolling down, greeting text fades out, 
+    // while main content fades in.
     _onScroll = (e) => {
-        const opacity = 1 - ((window.scrollY - (window.innerHeight/7)) / (window.innerHeight/3));
+        const greetingOpacity = (
+            1 - ((window.scrollY) / (window.innerHeight/4))
+        )
+        let opacity = 1 - ((window.scrollY - (window.innerHeight/3.35)) / (window.innerHeight/3.5));
+
         if (opacity >= 1) {
-            this.setState({opacity: 1, arrowOpacity: 1, textOpacity: 1});
-            return
+            opacity = 1
         }
         if (opacity < 0) {
-            this.setState({opacity: 0, arrowOpacity: 0, textOpacity: 0});
+            this.setState({opacity: 0, arrowOpacity: 0, greetingOpacity: 0});
             return
         }
         
         this.setState({opacity: opacity, 
-                       arrowOpacity: 0, 
-                       textOpacity: opacity/4});
+                       arrowOpacity: greetingOpacity, 
+                       greetingOpacity: greetingOpacity});
     }
 
     render(){
     return (<>
     <div className="cover-sheet" style={{opacity: this.state.opacity}}></div>
-    <div className="cover-page" onScroll={this._onScroll} style={{opacity: this.state.textOpacity}}>
+    <div className="cover-page" onScroll={this._onScroll} style={{opacity: this.state.greetingOpacity}}>
         <div className="greeting-wrapper">
             <Typewriter
                 options={{
