@@ -7,14 +7,16 @@ const ProjectPanel = props => {
         return <li key={index}>{tech}</li>
     })
     return(
-        <div className="project-card" id={project.id}>
-            <p>{project.name}</p>
-            <p>Description: {project.description}</p>
-            <span>
-                <a href={project.site} target="_blank" rel="noreferrer noopener">Site </a>
-                <a href={project.codeRepo} target="_blank" rel="noreferrer noopener">Code</a>
-            </span>
-            <ul>{listItems}</ul>
+        <div className="project-card">
+            <div className="section-container" id={project.id}>
+                <p>{project.name}</p>
+                <p>Description: {project.description}</p>
+                <span>
+                    <a href={project.site} target="_blank" rel="noreferrer noopener">Site</a>
+                    <a href={project.codeRepo} target="_blank" rel="noreferrer noopener">Code</a>
+                </span>
+                <ul>{listItems}</ul>
+            </div>
         </div>
     )
 }
