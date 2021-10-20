@@ -31,6 +31,7 @@
     max-width: 90vw;
     margin-left: 5vw;
     margin-right: 5vw;
+    font-weight: 300;
 }
 
 .cover-page u {
@@ -47,9 +48,9 @@
     color: var(--PURPLE);
 }
 
+/* Bouncing arrow animations */
 .scroll-instruction{
     text-align: center;
-    font-size: 2.3rem;
     color: var(--PURPLE);
 
     opacity: 0;
@@ -65,14 +66,11 @@
 
 .scroll-arrow {
     animation: 10s bounce ease-in-out infinite;
+    font-size: 2.3rem;
+    font-weight: 100;
 }
 
 @keyframes bounce {
-    /* 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
-    40% {transform: translateY(-30px);} 
-    60% {transform: translateY(-15px);}  */
-    
     0%, 20%, 40%, 60%, 80%, 100% {transform: translateY(0);} 
     10%, 30%, 50%, 70%, 90% {transform: translateY(-15px);} 
- 
 }
