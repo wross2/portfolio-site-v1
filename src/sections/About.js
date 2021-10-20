@@ -20,7 +20,7 @@ class About extends Component {
                         {aboutData.professional}
                     </div>
                     <div className="about-tech">
-                        My web development tech stack includes:
+                        My web development tech stack:
                         <ul id="tech-list">{
                             aboutData.tech.map((tech, index) => {
                                 return <li key={index}>{tech}</li>
