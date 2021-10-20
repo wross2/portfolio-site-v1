@@ -1,12 +1,15 @@
-/* #about-section {} */
+#about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70vh;
+}
 
 
-/* #about-professional, #about-tech{
-    width: 70%;
-    margin: 0 auto;
-    float: none;
-    margin-bottom: 2vh;
-} */
+.about-professional{
+    margin: 30px 0;
+}
 
 /* Main Profile Picture
 --------------------------------------- */
