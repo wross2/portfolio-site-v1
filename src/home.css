@@ -25,6 +25,11 @@
     width: 80%;
     margin-top: 2%;
     margin-bottom: 1%;
+    border-radius: 20px;
+
+    /* Shadow box from: https://getcssscan.com/css-box-shadow-examples, box #6 */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
 }
 
 .all-sections a:link, a:visited{
@@ -43,4 +48,21 @@
 ::selection{
     background-color: var(--PURPLE);
     color: var(--WHITE);
+}
+
+.section-container{
+    margin: 30px 30px;
+}
+
+@media (max-width: 450px){
+    .all-sections {
+        width: 100%;
+        margin-top: 2%;
+        margin-bottom: 1%;
+        border-radius: 0px;
+    
+        /* Shadow box from: https://getcssscan.com/css-box-shadow-examples, box #6 */
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        
+    }
 }
