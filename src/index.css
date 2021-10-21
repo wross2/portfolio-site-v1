@@ -23,26 +23,3 @@ html, body, #root, noscript {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
-
-li {
-    /* Base */
-    list-style: none;
-    position: relative;
-}
-
-li:before{
-    content: '›'; 
-    font-size: 25px;
-    font-weight: 900;
-    margin-left: -20px;
-    margin-right: 10px;
-    color: var(--PURPLE)
-}
-
-svg:hover {
-    fill: var(--BLACK);
-}
-
-svg{
-    fill: var(--PURPLE);
-}
