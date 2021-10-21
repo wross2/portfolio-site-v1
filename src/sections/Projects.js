@@ -7,7 +7,6 @@ import './styles/projects.css';
 const ProjectLinkIcons = props => {
     const project = props.project;
     let codeLink, siteLink;
-
     if (project.site){
         siteLink = (
             <a className="svg-icons" href={project.site} target="_blank" rel="noreferrer noopener">
@@ -15,7 +14,6 @@ const ProjectLinkIcons = props => {
             </a>
         )
     }
-
     if (project.codeRepo){
         codeLink = (
             <a className="svg-icons" href={project.codeRepo} target="_blank" rel="noreferrer noopener">
@@ -23,7 +21,6 @@ const ProjectLinkIcons = props => {
             </a>
         )
     }
-
     return (
         <>
             {siteLink}
