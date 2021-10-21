@@ -38,3 +38,11 @@ li:before{
     margin-right: 10px;
     color: var(--PURPLE)
 }
+
+svg:hover {
+    fill: var(--BLACK);
+}
+
+svg{
+    fill: var(--PURPLE);
+}
