@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
 import projectData from '../content/projects'
+import { ReactComponent as GithubIcon } from '../images/icons/github-icon.svg';
+import { ReactComponent as LinkIcon } from '../images/icons/link-icon.svg';
+import './styles/projects.css';
 
 const ProjectPanel = props => {
     const project = props.project
@@ -7,16 +10,18 @@ const ProjectPanel = props => {
         return <li key={index}>{tech}</li>
     })
     return(
-        <div className="project-card">
-            <div className="section-container" id={project.id}>
-                <p>{project.name}</p>
-                <p>Description: {project.description}</p>
-                <span>
-                    <a href={project.site} target="_blank" rel="noreferrer noopener">Site</a>
-                    <a href={project.codeRepo} target="_blank" rel="noreferrer noopener">Code</a>
-                </span>
-                <ul>{listItems}</ul>
-            </div>
+        <div className="project-card" id={project.id}>
+            <h2>{project.name}</h2>
+            <p>{project.description}</p>
+            <span>
+                <a className="svg-icons" href={project.site} target="_blank" rel="noreferrer noopener">
+                    <LinkIcon className="link-icon" />
+                </a>
+                <a className="svg-icons" href={project.codeRepo} target="_blank" rel="noreferrer noopener">
+                    <GithubIcon className="github-icon" />
+                </a>
+            </span>
+            <ul>{listItems}</ul>
         </div>
     )
 }
@@ -28,8 +33,10 @@ class Projects extends Component {
             return <ProjectPanel key={project.id} project={project} />
         })
         return (
-            <section className={className} id="projects-section">
-                {projectPanels}
+            <section className={className} >
+                <div className="section-container" id="projects-section">
+                    {projectPanels}
+                </div>
             </section>
         )
     }
