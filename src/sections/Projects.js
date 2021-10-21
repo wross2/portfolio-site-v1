@@ -4,6 +4,34 @@ import { ReactComponent as GithubIcon } from '../images/icons/github-icon.svg';
 import { ReactComponent as LinkIcon } from '../images/icons/link-icon.svg';
 import './styles/projects.css';
 
+const ProjectLinkIcons = props => {
+    const project = props.project;
+    let codeLink, siteLink;
+
+    if (project.site){
+        siteLink = (
+            <a className="svg-icons" href={project.site} target="_blank" rel="noreferrer noopener">
+                <LinkIcon className="link-icon" />
+            </a>
+        )
+    }
+
+    if (project.codeRepo){
+        codeLink = (
+            <a className="svg-icons" href={project.codeRepo} target="_blank" rel="noreferrer noopener">
+                <GithubIcon className="github-icon" />
+            </a>
+        )
+    }
+
+    return (
+        <>
+            {siteLink}
+            {codeLink}
+        </>
+    )
+}
+
 const ProjectPanel = props => {
     const project = props.project
     const listItems = project.tech.map((tech, index) => {
@@ -13,13 +41,8 @@ const ProjectPanel = props => {
         <div className="project-card" id={project.id}>
             <h2>{project.name}</h2>
             <p>{project.description}</p>
-            <span>
-                <a className="svg-icons" href={project.site} target="_blank" rel="noreferrer noopener">
-                    <LinkIcon className="link-icon" />
-                </a>
-                <a className="svg-icons" href={project.codeRepo} target="_blank" rel="noreferrer noopener">
-                    <GithubIcon className="github-icon" />
-                </a>
+            <span className="project-link-icons">
+                <ProjectLinkIcons project={project} />
             </span>
             <ul>{listItems}</ul>
         </div>
