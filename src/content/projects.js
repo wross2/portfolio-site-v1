@@ -7,8 +7,8 @@ const projectData = [
         tech: [
             "HTML / CSS", "Javascript"
         ],
-        description: "This project is an entirely frontend based project that " +
-                     "animates popular algorithms. Check out more in the Github Repo below. " +
+        description: "A frontent project that animates popular algorithms. " +
+                     "Check out more in the Github Repo below. " +
                      "This project is exlusively frontend and uses only " + 
                      "vanilla HTML, CSS, and Javascript.",
     },
