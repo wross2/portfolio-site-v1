@@ -28,17 +28,19 @@
     grid-row: 2 / 3;
 }
 
-/* Project Card Styling
+
+/* Content Styling
 --------------------------------------- */
 .project-card h2{
     font-size: 1.5rem;
     font-weight: 500;
 }
 
+
 /* Images
 --------------------------------------- */
 .project-card .img-container .img-wrapper{
-    overflow: auto;
+    overflow: hidden;
     border-radius: 5px;
     max-height: 450px;
     max-width: 450px;
@@ -51,4 +53,16 @@
     max-height: 450px;
     max-width: 450px;
     object-fit: contain;
+}
+
+@media (min-width: 700px){
+    /* Color Filter */
+    .project-card .img-container .img-wrapper .project-images{
+        -webkit-filter: grayscale(100%); /* sepia(100%) hue-rotate(230deg) saturate(80%); */
+        filter: grayscale(100%); /* sepia(100%) hue-rotate(230deg) saturate(80%); */
+    }
+    .project-card .img-container .img-wrapper .project-images:hover{
+        -webkit-filter: none;
+        filter: none;
+    }
 }

@@ -46,9 +46,11 @@ const ProjectPanel = props => {
                 <ul className="project-tech-list">{listItems}</ul>
             </div>
             <div className="img-container">
-                <div className="img-wrapper">
-                    <img className={"project-images"} src={project.image} alt="Project preview"/>
-                </div>
+                <a href={project.site} target="_blank" rel="noreferrer noopener">
+                    <div className="img-wrapper">
+                        <img className={"project-images"} src={project.image} alt="Project preview"/>
+                    </div>
+                </a>
             </div>
         </div>
     )
