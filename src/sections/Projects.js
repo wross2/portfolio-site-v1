@@ -4,6 +4,7 @@ import { ReactComponent as GithubIcon } from '../images/icons/github-icon.svg';
 import { ReactComponent as LinkIcon } from '../images/icons/link-icon.svg';
 import './styles/projects.css';
 
+
 const ProjectLinkIcons = props => {
     const project = props.project;
     let codeLink, siteLink;
@@ -42,6 +43,9 @@ const ProjectPanel = props => {
                 <ProjectLinkIcons project={project} />
             </span>
             <ul>{listItems}</ul>
+            <div className="img-container">
+                <img className={"project-images"} src={project.image} alt="Project preview"/>
+            </div>
         </div>
     )
 }

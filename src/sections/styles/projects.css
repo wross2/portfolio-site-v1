@@ -1,6 +1,34 @@
+#projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-card{
+    display: grid;
+
+}
 
 .project-card h2{
     font-size: 1.5rem;
     font-weight: 500;
 }
 
+/* Images
+--------------------------------------- */
+.project-images{
+    height: auto;
+    width: auto;
+    max-height: 250px;
+    max-width: 400px;
+    /* transform: scale(1);
+    margin-top: 60px; */
+}
+
+.project-card .img-container{
+    height: 250px;
+    width: 400px;
+    overflow: hidden;
+    /* border-radius: 50%; */
+}
