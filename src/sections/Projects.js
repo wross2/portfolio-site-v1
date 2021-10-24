@@ -38,13 +38,17 @@ const ProjectPanel = props => {
     return(
         <div className="project-card" id={project.id}>
             <h2>{project.name}</h2>
-            <p className="project-description">{project.description}</p>
-            <span className="project-link-icons">
-                <ProjectLinkIcons project={project} />
-            </span>
-            <ul className="project-tech-list">{listItems}</ul>
+            <div className="proj-content-wrapper">
+                <p className="project-description">{project.description}</p>
+                <span className="project-link-icons">
+                    <ProjectLinkIcons project={project} />
+                </span>
+                <ul className="project-tech-list">{listItems}</ul>
+            </div>
             <div className="img-container">
-                <img className={"project-images"} src={project.image} alt="Project preview"/>
+                <div className="img-wrapper">
+                    <img className={"project-images"} src={project.image} alt="Project preview"/>
+                </div>
             </div>
         </div>
     )
