@@ -14,7 +14,7 @@ const projectData = [
                      "Check out more in the Github Repo below. " +
                      "This project is exlusively frontend and uses only " + 
                      "vanilla HTML, CSS, and Javascript.",
-        image: blogSiteImg,
+        image: AlgoVizImg,
     },
     {
         id: "research-blog-project",
@@ -28,7 +28,7 @@ const projectData = [
             "This project is a personal blog to document my investment research. " +
             "It makes use of a flat file CMS called Pelican, that is built on Python."
         ),
-        image: AlgoVizImg,
+        image: blogSiteImg,
     },
 ]
 
