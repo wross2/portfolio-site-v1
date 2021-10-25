@@ -1,13 +1,14 @@
 # About
 
+Site: https://williamross.info
+
 A site for my personal portfolio, built on React.
 
 #### Color Scheme:
 
 - Black
 - White
-- Grey
-- Purple
+- Purple (#ad78bf)
 
 # Acknowledgements
 
