@@ -81,7 +81,7 @@ svg{
     fill: var(--PURPLE);
 }
 
-@media (max-width: 450px){
+@media (max-width: 550px){
     .all-sections {
         width: 100%;
         margin-top: 2%;
@@ -90,6 +90,5 @@ svg{
     
         /* Shadow box from: https://getcssscan.com/css-box-shadow-examples, box #6 */
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        
     }
 }
