@@ -65,6 +65,7 @@ class Projects extends Component {
         return (
             <section className={className} >
                 <div className="section-container" id="projects-section">
+                    <h1 className="proj-sect-header">Featured Projects</h1>
                     {projectPanels}
                 </div>
             </section>

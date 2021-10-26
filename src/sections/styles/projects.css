@@ -5,12 +5,17 @@
     justify-content: space-between;
 }
 
+.proj-sect-header{
+    font-size: 1.9rem;
+    border-radius: 5px;
+}
+
 .project-card{
     margin: 10px 5px;
 }
 
 
-/* Project Card Layout
+/* Project Card Grid Layout
 --------------------------------------- */
 .project-card{
     display: grid;
