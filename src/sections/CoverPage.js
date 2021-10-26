@@ -3,14 +3,17 @@ import Typewriter from 'typewriter-effect';
 import "./styles/cover-page.css";
 
 
-const typingExecution = (typewriter) => {typewriter
-    .start().pauseFor(2000).changeDelay(50)
-    .typeString("Hello.").pauseFor(1500)
-    .typeString(" My name is William Ross.").pauseFor(1000)
-    .typeString(" I am a<br>Creator.").pauseFor(1000)
-    .deleteChars(8).pauseFor(750).typeString("Builder.")
-    .pauseFor(1000).deleteChars(8).pauseFor(1000)
-    .changeDelay(80).typeString("<u>Software Engineer</u>.")
+const typingExecution = (typewriter) => {
+    const speed = 0.75;
+
+    typewriter
+    .start().pauseFor(2000*speed).changeDelay(50*speed)
+    .typeString("Hello.").pauseFor(1500*speed)
+    .typeString(" My name is William Ross.").pauseFor(1000*speed)
+    .typeString(" I am a<br>Creator.").pauseFor(1000*speed)
+    .deleteChars(8).pauseFor(750*speed).typeString("Builder.")
+    .pauseFor(1200*speed).deleteChars(8).pauseFor(1000*speed)
+    .changeDelay(80*speed).typeString("<u>Software Engineer</u>.");
 }
 
 class CoverPage extends Component{

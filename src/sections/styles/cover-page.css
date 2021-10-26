@@ -55,7 +55,7 @@
 
     opacity: 0;
     animation: fadeIn 3s;
-    animation-delay: 15.5s;
+    animation-delay: 12s; /* Previous value when speed=1, 15.5s; */
     animation-fill-mode: forwards;
 }
 
